@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-image: url(img/admission_bg.jpg);
+        background-size: cover;
+        /* Ensures the image covers the entire screen */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents image repetition */
+        height: 100vh;
+        /* Full viewport height */
+
+        float: left;
+        width: 50%;
+        /* border: 2px solid black; */
+        padding: 20px;
+
+
+    }
+
+    #admission-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #admission-form label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    #admission-form input,
+    #admission-form select,
+    #admission-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #admission-form input:hover,
+    #admission-form select:hover,
+    #admission-form textarea:hover {
+        border: 2px solid #f1c500;
+        border-radius: 10px
+    }
+
+    #admission-btn {
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        border-radius: 70px;
+    }
+
+    #admission-btn:hover {
+        background-color: #dd911f;
+        font-size: 20px;
+    }
+
+    .parent-container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        height: 100%;
+        /* Full viewport height */
+    }
+
+    #admission-form {
+        height: 80vh;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            background-image: url(img/bg2.png);
+            background-size: cover;
+            /* Ensures the image covers the entire screen */
+            background-position: center;
+            /* Centers the image */
+            background-repeat: no-repeat;
+            /* Prevents image repetition */
+            height: 100vh;
+            /* Full viewport height */
+        }
+
+        body {
+            width: 100%;
+            /* Occupies 80% of the screen width */
+            margin: auto;
+            /* Centers it horizontally */
+            display: flex;
+            justify-content: center;
+            /* Center content horizontally */
+            align-items: center;
+            /* Center content vertically */
+            height: 100vh;
+            /* Full viewport height */
+        }
+        #admission-form {
+        width: 95%; /* Slightly wider for smaller screens */
+        padding: 15px;
+    }
+
+    }
+</style>
+
+<body>
+    <div class="form">
+        <section id="admission-form">
+            <h2>Admission Form</h2>
+            <form id="form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Choose Course --</option>
+                    <option value="Science">Science</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Arts">Arts</option>
+                </select>
+                <div class="parent-container">
+                    <button type="submit" id="admission-btn">Apply Now</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
